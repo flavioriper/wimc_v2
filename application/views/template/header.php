@@ -25,7 +25,7 @@
         <script type="text/javascript" src="<?php echo base_url().'assets/vendor/jQuery-Mask-Plugin-master/dist/jquery.mask.js'?>" defer></script>
         <script type="text/javascript" src="<?php echo base_url().'assets/vendor/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js'?>" defer></script>
         <script type="text/javascript" src="<?php echo base_url().'assets/js/main.js' ?>" defer></script>
-        <?php $this->load->view($style) ?>
+        <?php $this->load->view($localPath.'style') ?>
     </head>
     <body class="fixed-nav sticky-footer bg-dark" id="page-top">
         <link rel="stylesheet" href="<?=base_url('assets/css/auxiliar.css')?>">
@@ -48,6 +48,7 @@
                             <span class="nav-link-text ml-1">Equipamentos</span>
                         </a>                    
                         <ul class="sidenav-second-level collapse" id="collapseEquipamentos">
+                            <li><a href="<?=base_url('equipamentos/adicionar')?>">Adicionar</a></li>
                             <li><a href="<?=base_url('equipamentos/listar')?>">Listar</a></li>
                         </ul>
                     </li>

@@ -51,3 +51,7 @@ h1.header {
     text-align: center !important;
     font-size: 1.9em !important;
 }
+
+.hide {
+    display: none;
+}

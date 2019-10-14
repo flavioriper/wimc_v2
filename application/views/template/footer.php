@@ -30,6 +30,6 @@
 		<script type="text/javascript" src="<?php echo $this->config->base_url().'assets/vendor/DataTables/dataTables.bootstrap4.min.js'?>"></script>
 		<script type="text/javascript" src="<?php echo $this->config->base_url().'assets/vendor/DataTables/dataTables.responsive.min.js'?>"></script>
 		<script type="text/javascript" src="<?php echo $this->config->base_url().'assets/vendor/DataTables/responsive.bootstrap4.min.js'?>"></script>
-		<?php $this->load->view($script) ?>
+		<?php $this->load->view($localPath.'script') ?>
 	</body>
 </html>
