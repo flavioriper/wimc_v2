@@ -20,16 +20,17 @@
 				</div>
 			</div>
 		</div>
-		<script src="<?php echo base_url() ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="<?php echo base_url() ?>/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-		<script src="<?php echo base_url() ?>/assets/js/sb-admin.min.js"></script>
-		<script src="<?php echo base_url() ?>/assets/js/mascaras.js"></script>
-		<script src="<?php echo base_url() ?>/assets/js/cep.js"></script>
-		<script src="<?php echo base_url() ?>/assets/js/bootstrap-select.bundle.js"></script>
-		<script type="text/javascript" src="<?php echo $this->config->base_url().'assets/vendor/DataTables/datatables.min.js'?>"></script>
-		<script type="text/javascript" src="<?php echo $this->config->base_url().'assets/vendor/DataTables/dataTables.bootstrap4.min.js'?>"></script>
-		<script type="text/javascript" src="<?php echo $this->config->base_url().'assets/vendor/DataTables/dataTables.responsive.min.js'?>"></script>
-		<script type="text/javascript" src="<?php echo $this->config->base_url().'assets/vendor/DataTables/responsive.bootstrap4.min.js'?>"></script>
+		<script src="<?=base_url() ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="<?=base_url() ?>/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+		<script src="<?=base_url() ?>/assets/js/sb-admin.min.js"></script>
+		<script src="<?=base_url() ?>/assets/js/mascaras.js"></script>
+		<script src="<?=base_url() ?>/assets/js/cep.js"></script>
+		<script src="<?=base_url() ?>/assets/js/bootstrap-select.bundle.js"></script>
+		<script type="text/javascript" src="<?=base_url().'assets/vendor/DataTables/datatables.min.js'?>"></script>
+		<script type="text/javascript" src="<?=base_url().'assets/vendor/DataTables/dataTables.bootstrap4.min.js'?>"></script>
+		<script type="text/javascript" src="<?=base_url().'assets/vendor/DataTables/dataTables.responsive.min.js'?>"></script>
+		<script type="text/javascript" src="<?=base_url().'assets/vendor/DataTables/responsive.bootstrap4.min.js'?>"></script>
+		<script type="text/javascript" src="<?=base_url().'assets/js/jquery.mask.js'?>"></script>
 		<?php $this->load->view($localPath.'script') ?>
 	</body>
 </html>

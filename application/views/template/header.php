@@ -43,6 +43,15 @@
                             <span class="nav-link-text ml-1">Dashboard</span>
                         </a>
                     </li>
+                    <li  class="nav-item" data-toggle="tooltip" data-placement="right" title="Clientes">                    
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseClientes" data-parent="#exampleAccordion">
+                            <span class="nav-link-text ml-1">Clientes</span>
+                        </a>                    
+                        <ul class="sidenav-second-level collapse" id="collapseClientes">
+                            <li><a href="<?=base_url('clientes/adicionar')?>">Adicionar</a></li>
+                            <li><a href="<?=base_url('clientes/listar')?>">Listar</a></li>
+                        </ul>
+                    </li>
                     <li  class="nav-item" data-toggle="tooltip" data-placement="right" title="Equipamentos">                    
                         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseEquipamentos" data-parent="#exampleAccordion">
                             <span class="nav-link-text ml-1">Equipamentos</span>
