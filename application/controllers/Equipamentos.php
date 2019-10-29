@@ -34,6 +34,7 @@ class Equipamentos extends CI_Controller {
 
 		$data['modelos'] = $this->equipamentos_model->getModelos();
 		$data['localizacoes'] = $this->equipamentos_model->getLocalizacoes();
+		$data['status'] = $this->equipamentos_model->getStatus();
 		$data['equipamento'] = $this->equipamentos_model->getEquipamentos($id);
 		$data['equipamento']->atualizacao_firmware = date('Y-m-d',strtotime($data['equipamento']->atualizacao_firmware));
 
@@ -83,7 +84,7 @@ class Equipamentos extends CI_Controller {
 				'atualizacao_firmware' => $equipamento->atualizacao_firmware,
 				'localizacao' => $equipamento->localizacao,
 				'observacoes' => $equipamento->observacoes,
-				'status' => 1
+				'status' => $equipamento->status
 			);
 			if ($equipamentoAntigo->numero_serie != $equipamentoNovo['numero_serie'] && $this->equipamentos_model->checkNumeroSerie($equipamentoNovo['numero_serie'])) {
 				echo 'erro-505';

@@ -11,6 +11,7 @@
         equipamento.atualizacao_firmware = $('#atualizacao_firmware').val()
         equipamento.localizacao = $('#localizacao').val()
         equipamento.observacoes = $('#observacoes').val()
+        equipamento.status = $('#status').val()
         equipamento = JSON.stringify(equipamento)
         $.ajax({
             url: "<?=base_url('equipamentos/update')?>",

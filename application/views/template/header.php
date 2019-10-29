@@ -61,6 +61,24 @@
                             <li><a href="<?=base_url('equipamentos/listar')?>">Listar</a></li>
                         </ul>
                     </li>
+                    <li  class="nav-item" data-toggle="tooltip" data-placement="right" title="Embarcadores">                    
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseEmbarcadores" data-parent="#exampleAccordion">
+                            <span class="nav-link-text ml-1">Embarcadores</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseEmbarcadores">
+                            <li><a href="<?=base_url('embarcadores/adicionar')?>">Adicionar</a></li>
+                            <li><a href="<?=base_url('embarcadores/listar')?>">Listar</a></li>
+                        </ul>
+                    </li>
+                    <li  class="nav-item" data-toggle="tooltip" data-placement="right" title="Processos">                    
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseProcessos" data-parent="#exampleAccordion">
+                            <span class="nav-link-text ml-1">Processos</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseProcessos">
+                            <li><a href="<?=base_url('processos/adicionar')?>">Adicionar</a></li>
+                            <li><a href="<?=base_url('processos/listar')?>">Listar</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <ul class="navbar-nav sidenav-toggler">

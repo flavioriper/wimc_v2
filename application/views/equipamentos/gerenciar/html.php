@@ -13,17 +13,53 @@
 
 <form id="frm-equipamento">
     <input value="<?=$equipamento->id?>" id="id" name="id" type="hidden">
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <label class="input-group-text" for="tipo_equipamento">Tipo de Equipamento</label>
-        </div>
-        <select class="custom-select" id="tipo_equipamento" name="tipo_equipamento" required>
-            <?php foreach($modelos as $modelo): ?>                    
-                <option value="<?=$modelo->id?>" <?=($modelo->id == $equipamento->tipo_equipamento)?'selected':''?>><?=$modelo->nome?></option>
-            <?php endforeach; ?>
-        </select>
-    </div>
     <div class="form-row">
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="tipo_equipamento">Tipo de Equipamento</label>
+                </div>
+                <select class="custom-select" id="tipo_equipamento" name="tipo_equipamento" required>
+                    <?php foreach($modelos as $modelo): ?>                    
+                        <option value="<?=$modelo->id?>" <?=($modelo->id == $equipamento->tipo_equipamento)?'selected':''?>><?=$modelo->nome?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="status">Status</label>
+                </div>
+                <select class="custom-select" id="status" name="status" <?=($equipamento->status_id != 4 && $equipamento->status_id != 6)? 'disabled':''?>>
+                <?php foreach($status as $status): ?>
+                
+                    <?php if ($equipamento->status_id == 4 && ($status->id == 4 || $status->id == 6)) { ?>
+                        <option 
+                            value="<?=$status->id?>"
+                            <?=($status->id == $equipamento->status_id)?'selected disabled':''?>
+                        >
+                            <?=$status->descricao?>
+                        </option>
+                    <?php } else if ($equipamento->status_id != 4 && $equipamento->status_id != 6 && $status->id == $equipamento->status_id) {?>
+                        <option 
+                            value="<?=$status->id?>"
+                            <?=($status->id == $equipamento->status_id)?'selected':''?>
+                        >
+                            <?=$status->descricao?>
+                        </option>
+                    <?php } else if ($equipamento->status_id == 6 && ($status->id == 6 || $status->id == 1 || $status->id == 7 || $status->id == 8)) {?>
+                        <option 
+                            value="<?=$status->id?>"
+                            <?=($status->id == $equipamento->status_id)?'selected disabled':''?>
+                        >
+                            <?=$status->descricao?>
+                        </option>
+                    <?php }?>
+                <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
         <div class="col-sm-6">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
